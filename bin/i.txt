@@ -1,1 +1,20 @@
+# Instalar dependências do Buildozer
+!sudo apt update
+!sudo apt install -y python3-pip build-essential libssl-dev libffi-dev python3-dev
+!sudo apt install -y libtool libffi-dev libssl-dev
+!sudo apt install -y build-essential git
+!pip install --upgrade cython
+!pip install kivy
+!pip install buildozer
 
+# Clonar seu repositório (altere a URL para o seu repositório)
+!git clone https://github.com/dhouel/snakeandroid
+
+# Acessar o diretório do projeto
+%cd snakeandroid
+
+# Inicializar Buildozer
+!buildozer init
+
+# Gerar o APK
+!buildozer -v android debug
